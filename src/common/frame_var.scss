@@ -1,0 +1,16 @@
+$c-width : 800px;
+$easing: cubic-bezier(.11, .65, .04, 1);
+
+
+@mixin transition_ease ($prop, $time) {
+    -webit-transition: $prop $time $easing;
+    transition: $prop $time $easing;
+}
+@mixin transition_step_start ($prop, $time) {
+    -webit-transition: $prop $time $easing;
+    transition: $prop $time step-start;
+}
+@mixin transition_step_end ($prop, $time) {
+    -webit-transition: $prop $time $easing;
+    transition: $prop $time step-end;
+}
