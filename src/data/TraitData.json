@@ -1,0 +1,12 @@
+{
+  "trait_datas" : [
+    {
+      "trait_name" : "기지",
+      "trait_type" : "add_dice"
+    },
+    {
+      "trait_name" : "재치",
+      "trait_type" : "add_dice"
+    }
+  ]
+}

@@ -1,12 +1,19 @@
 <template>
   <div id="player_status_frame">
+    <PlayerEquipmentFrame/>
+      <PlayerStatFrame/>
   </div>
 </template>
 
 <script>
-import PlayerEquipmentFrame from './Equipment/PlayerEquipmentFrame'
+import PlayerEquipmentFrame from './Equipment/PlayerEquipmentFrame';
+import PlayerStatFrame from './Status/PlayerStatFrame';
 export default{
-  name : 'PlayerStatusFrame'
+  name : 'PlayerStatusFrame',
+  components : {
+    PlayerEquipmentFrame,
+    PlayerStatFrame
+  }
 }
 </script>
 

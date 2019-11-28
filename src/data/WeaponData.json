@@ -1,0 +1,94 @@
+{
+  "weapon_datas" : [
+    {
+      "item_name" : "K-3",
+      "item_type" : "weapon",
+      "attack_type" : "range",
+      "weapon_type" : "gun",
+      "skills" : [
+        {
+          "skill_name" : "정밀 사격",
+          "skill_link" : 0,
+          "skill_type" : "defenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "dice_num" : 2
+            }
+          ],
+          "skill_effect" : {
+
+          }
+        },
+        {
+          "skill_name" : "제압 사격",
+          "skill_link" : 1,
+          "skill_type" : "offenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "dice_num" : 2
+            }
+          ],
+          "skill_effect" : {
+
+          }
+        },
+        {
+          "skill_name" : "재장전",
+          "skill_link" : 2,
+          "skill_type" : "offenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "dice_num" : 2
+            }
+          ],
+          "skill_effect" : {
+
+          }
+        }
+      ]
+    },
+    {
+      "item_name" : "농장삽",
+      "item_type" : "weapon",
+      "attack_type" : "close",
+      "weapon_type" : "shovel",
+      "skills" : [
+        {
+          "skill_name" : "찌르기",
+          "skill_link" : 0
+        },
+        {
+          "skill_name" : "휘두르기",
+          "skill_link" : 1
+        },
+        {
+          "skill_name" : "거리 벌리기",
+          "skill_link" : 2
+        }
+      ]
+    },
+    {
+      "item_name" : "벌목도끼",
+      "item_type" : "weapon",
+      "attack_type" : "close",
+      "weapon_type" : "axe",
+      "skills" : [
+        {
+          "skill_name" : "크게 내리긋기",
+          "skill_link" : 0
+        },
+        {
+          "skill_name" : "휘두르기",
+          "skill_link" : 1
+        },
+        {
+          "skill_name" : "뛰어들기",
+          "skill_link" : 2
+        }
+      ]
+    }
+  ]
+}

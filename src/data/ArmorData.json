@@ -1,0 +1,34 @@
+{
+  "armor_datas" : [
+    {
+      "item_name" : "기본 옷",
+      "item_type" : "armor",
+      "skills" : [
+        {
+          "skill_name" : "방어 주사위 증가",
+          "skill_add" : "a"
+        }
+      ]
+    },
+    {
+      "item_name" : "기본 옷",
+      "item_type" : "armor",
+      "skills" : [
+        {
+          "skill_name" : "방어 주사위 증가",
+          "skill_add" : "a"
+        }
+      ]
+    },
+    {
+      "item_name" : "기본 옷",
+      "item_type" : "armor",
+      "skills" : [
+        {
+          "skill_name" : "방어 주사위 증가",
+          "skill_add" : "a"
+        }
+      ]
+    }
+  ]
+}

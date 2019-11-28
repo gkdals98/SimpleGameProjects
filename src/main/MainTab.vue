@@ -32,6 +32,11 @@ export default {
     BattleFrame,
     PlayerSettingFrame,
     EnemySettingFrame
+  },
+  methods : {
+    SampleMe : function(){
+      console.log("Haha");
+    }
   }
 }
 </script>
@@ -66,13 +71,13 @@ $content-fadein-time: 0.7s;
         input[type=radio] {
             display: none;
 
-            &:checked + label {
-              & .content {
-                @include transition_step_end(opacity, $content-fadein-time);
-                opacity: 1;
-                pointer-events: none;
-              }
-            }
+            // &:checked + label {
+            //   & .content {
+            //     @include transition_step_end(opacity, $content-fadein-time);
+            //     opacity: 1;
+            //     pointer-events: none;
+            //   }
+            // }
             @for $i from 1 through $tabs {
                 &:checked + label ~ label:nth-child(#{2*$i}) {
                     width: ($tabs - $i)*$marker-width + $indent;
@@ -125,5 +130,5 @@ $content-fadein-time: 0.7s;
             }
         }
     }
-  }
+}
 </style>

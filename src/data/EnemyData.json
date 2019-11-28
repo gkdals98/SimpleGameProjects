@@ -1,0 +1,136 @@
+{
+  "enemy_datas" : [
+    {
+      "enemy_name" : "산간지대 1형태",
+      "skills" : [
+        {
+          "skill_name" : "할퀴기",
+          "skill_type" : "offenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "dice_num" : 2
+            }
+          ],
+          "skill_effect" : {
+
+          }
+        },
+        {
+          "skill_name" : "팔 휘두르기",
+          "skill_type" : "defenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "dice_num" : 2
+            }
+          ],
+          "skill_effect" : {
+
+          }
+        },
+        {
+          "skill_name" : "주시",
+          "skill_type" : "CC",
+          "skill_dices" : [
+            {
+              "dice_type" : "int",
+              "dice_num" : 2
+            }
+          ],
+          "skill_effect" : {
+
+          }
+        }
+      ]
+    },
+    {
+      "enemy_name" : "산간지대 2형태",
+      "skills" : [
+        {
+          "skill_name" : "할퀴기",
+          "skill_type" : "offenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "dice_num" : 2
+            }
+          ],
+          "skill_effect" : {
+
+          }
+        },
+        {
+          "skill_name" : "팔 휘두르기",
+          "skill_type" : "defenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "dice_num" : 2
+            }
+          ],
+          "skill_effect" : {
+
+          }
+        },
+        {
+          "skill_name" : "주시",
+          "skill_type" : "CC",
+          "skill_dices" : [
+            {
+              "dice_type" : "int",
+              "dice_num" : 2
+            }
+          ],
+          "skill_effect" : {
+
+          }
+        }
+      ]
+    },
+    {
+      "enemy_name" : "산간지대 3형태",
+      "skills" : [
+        {
+          "skill_name" : "할퀴기",
+          "skill_type" : "offenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "dice_num" : 2
+            }
+          ],
+          "skill_effect" : {
+
+          }
+        },
+        {
+          "skill_name" : "팔 휘두르기",
+          "skill_type" : "defenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "dice_num" : 2
+            }
+          ],
+          "skill_effect" : {
+
+          }
+        },
+        {
+          "skill_name" : "주시",
+          "skill_type" : "CC",
+          "skill_dices" : [
+            {
+              "dice_type" : "int",
+              "dice_num" : 2
+            }
+          ],
+          "skill_effect" : {
+
+          }
+        }
+      ]
+    }
+  ]
+}

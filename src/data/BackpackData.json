@@ -1,0 +1,46 @@
+{
+  "backpack_datas" : [
+    {
+      "item_name" : "기본형 군장",
+      "item_type" : "backpack",
+      "skills" : [
+        {
+          "skill_name" : "강타계 공격주사위 증가",
+          "skill_type" : "battlePassive"
+        },
+        {
+          "skill_name" : "적제량 증가",
+          "skill_type" : "LivingPassive"
+        }
+      ]
+    },
+    {
+      "item_name" : "기본형 군장",
+      "item_type" : "backpack",
+      "skills" : [
+        {
+          "skill_name" : "강타계 공격주사위 증가",
+          "skill_type" : "battlePassive"
+        },
+        {
+          "skill_name" : "적제량 증가",
+          "skill_type" : "LivingPassive"
+        }
+      ]
+    },
+    {
+      "item_name" : "기본형 군장",
+      "item_type" : "backpack",
+      "skills" : [
+        {
+          "skill_name" : "강타계 공격주사위 증가",
+          "skill_type" : "battlePassive"
+        },
+        {
+          "skill_name" : "적제량 증가",
+          "skill_type" : "LivingPassive"
+        }
+      ]
+    }
+  ]
+}
