@@ -2,11 +2,43 @@
   "trait_datas" : [
     {
       "trait_name" : "기지",
-      "trait_type" : "add_dice"
+      "trait_type" : "add_dice",
+      "trait_color" : "red"
     },
     {
       "trait_name" : "재치",
-      "trait_type" : "add_dice"
+      "trait_type" : "add_dice",
+      "trait_color" : "blue"
+    },
+    {
+      "trait_name" : "현명",
+      "trait_type" : "add_dice",
+      "trait_color" : "grean"
+    },
+    {
+      "trait_name" : "방어술",
+      "trait_type" : "add_dice",
+      "trait_color" : "purple"
+    },
+    {
+      "trait_name" : "침착함",
+      "trait_type" : "buff",
+      "trait_color" : "white"
+    },
+    {
+      "trait_name" : "위협",
+      "trait_type" : "debuff",
+      "trait_color" : "yellow"
+    },
+    {
+      "trait_name" : "골절",
+      "trait_type" : "penalty",
+      "trait_color" : "black"
+    },
+    {
+      "trait_name" : "광기",
+      "trait_type" : "tracker",
+      "trait_color" : "brown"
     }
   ]
 }

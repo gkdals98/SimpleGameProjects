@@ -83,7 +83,6 @@ export const current_on_battle = new Vuex.Store({
 
 
 
-
     strAdd ( state, backpack ) {
       if(state.player.current_str_dices < 9){
         state.player.current_str_dices++;
@@ -126,6 +125,17 @@ export const current_on_battle = new Vuex.Store({
     },
 
 
+
+    addTraits( state, trait) {
+      state.player.current_traits.add(trait);
+    },
+    addTraits( state, trait) {
+      const idx = state.player.current_traits.findIndex(
+        function(item) {return item.trait_name === trait.trait_name});
+      if (idx > -1){
+        state.player.current_traits.splice(idx, 1);
+      }
+    },
 
 
     resetRound ( state ) {
