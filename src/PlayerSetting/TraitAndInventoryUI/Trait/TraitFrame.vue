@@ -1,11 +1,51 @@
 <template>
   <div id="trait_frame">
+    <TraitModal
+      v-show="isTraitModalVisible"
+      @close="closeModal"
+    />
+    <TraitItem
+      v-for="(trait, index) in applied_traits"
+      v-bind:trait="trait"
+      v-bind:key="index"
+      v-bind:applied=true
+      @trait_selected="dispose_trait"
+    />
+    <div id="add_trait" @click="open_traitlist">+</div>
   </div>
 </template>
 
 <script>
+import TraitItem from '../../../common/component/TraitItem';
+import TraitModal from './TraitModal';
+import { current_on_battle } from "../../../core/CurrentOnBattle.js";
 export default{
-  name : 'TraitFrame'
+  name : 'TraitFrame',
+  components : {
+    TraitItem,
+    TraitModal
+  },
+  data : function(){
+    return {
+      isTraitModalVisible : false
+    }
+  },
+  computed : {
+    applied_traits : function () {
+      return current_on_battle.state.player.current_traits;
+    }
+  },
+  methods : {
+    open_traitlist : function(){
+      this.isTraitModalVisible = true;
+    },
+    closeModal : function(){
+      this.isTraitModalVisible = false;
+    },
+    dispose_trait : function(trait) {
+      current_on_battle.commit("removeTraits", trait);
+    }
+  }
 }
 </script>
 
@@ -19,8 +59,20 @@ export default{
   background : #5F856F;
   border : 4px solid #000000;
   border-radius:9px;
+  align-content: flex-start;
 
   display: flex;
   flex-wrap: wrap;
+  overflow: auto;
+  #add_trait{
+    background : #5F856F;
+    border : 4px solid #000000;
+    border-radius:9px;
+    height: 30px;
+    width: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding: 1px;
+  }
 }
 </style>

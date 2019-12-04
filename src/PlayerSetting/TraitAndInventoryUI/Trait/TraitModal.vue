@@ -22,11 +22,11 @@
           </slot>
         </header>
         <div id="equipment_items">
-          <ItemListTemplate
-            v-for="(item, index) in items"
-            v-bind:item="item"
+          <TraitItem
+            v-for="(trait, index) in unapplied_traits"
+            v-bind:trait="trait"
             v-bind:key="index"
-            @selected="item_selected"
+            @trait_selected="trait_selected"
           />
         </div>
       </div>
@@ -35,42 +35,28 @@
 </template>
 
 <script>
-import { weapon_repository } from "../../../data/WeaponRepository.js";
 import { current_on_battle } from "../../../core/CurrentOnBattle.js";
 import TraitItem from "../../../common/component/TraitItem";
 
 export default{
-  name : 'EquipmentModal',
+  name : 'TraitModal',
   components : {
-    ItemListTemplate
+    TraitItem
   },
   computed : {
-    items : function(){
-      if(this.current_modal == 0){
-        return weapon_repository.getWholeData();
-      }else if(this.current_modal == 1){
-        return armor_repository.getWholeData();
-      }else if(this.current_modal == 2){
-        return backpack_repository.getWholeData();
-      }
+    unapplied_traits : function(){
+      return current_on_battle.state.etc.unapplied_traits;
     }
   },
   methods : {
     close : function(){
       this.$emit('close');
     },
-    item_selected : function(item){
-      if(this.current_modal == 0){
-        current_on_battle.commit( "setCurrentWeapon" , item );
-      }else if(this.current_modal == 1){
-        current_on_battle.commit( "setCurrentArmor" , item );
-      }else if(this.current_modal == 2){
-        current_on_battle.commit( "setCurrentBackpack" , item );
-      }
+    trait_selected : function(trait){
+      current_on_battle.commit( "addTraits", trait );
       this.$emit('close');
     }
-  },
-  props : ["current_modal"]
+  }
 }
 </script>
 
@@ -94,6 +80,8 @@ export default{
   background:#AAC2A3;
   width: 100%;
   height: 573px;
-  overflow-y:scroll;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
 }
 </style>

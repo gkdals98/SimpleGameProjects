@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import EquipmentModal from "./EquipModalUI";
+import EquipmentModal from "./EquipmentModalUI";
 import { current_on_battle } from "../../../core/CurrentOnBattle.js";
 export default{
   name : 'PlayerEquipmentFrame',

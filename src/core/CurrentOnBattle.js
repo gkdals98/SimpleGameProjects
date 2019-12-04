@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import {trait_repository} from '../data/TraitRepository.js'
 
 Vue.use(Vuex)
 
@@ -49,6 +50,9 @@ export const current_on_battle = new Vuex.Store({
       enemy_max_HP : 30,
       enemy_current_HP : 30,
       enemy_buffs : [],
+    },
+    etc : {
+      unapplied_traits : trait_repository.getWholeData()
     }
   },
   getters: {
@@ -127,14 +131,28 @@ export const current_on_battle = new Vuex.Store({
 
 
     addTraits( state, trait) {
-      state.player.current_traits.add(trait);
+      const idx = state.etc.unapplied_traits.findIndex(
+        function(item) {return item.trait_name === trait.trait_name});
+
+      if (idx > -1){
+        state.etc.unapplied_traits.splice(idx, 1);
+      }
+
+      console.log(state.player.current_traits)
+      state.player.current_traits.push(trait);
     },
-    addTraits( state, trait) {
+    removeTraits( state, trait) {
+      state.etc.unapplied_traits.push(trait);
+
       const idx = state.player.current_traits.findIndex(
         function(item) {return item.trait_name === trait.trait_name});
       if (idx > -1){
         state.player.current_traits.splice(idx, 1);
       }
+    },
+    cleanTriats( state ) {
+      state.player.current_traits = [];
+      state.etc.unapplid_traits = trait_repository.getWholeData();
     },
 
 
