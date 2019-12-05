@@ -22,7 +22,7 @@
           </slot>
         </header>
         <div id="equipment_items">
-          <ItemListTemplate
+          <EquipmentListTemplate
             v-for="(item, index) in items"
             v-bind:item="item"
             v-bind:key="index"
@@ -39,12 +39,12 @@ import { weapon_repository } from "../../../data/WeaponRepository.js";
 import { armor_repository } from "../../../data/ArmorRepository.js";
 import { backpack_repository } from "../../../data/BackpackRepository.js";
 import { current_on_battle } from "../../../core/CurrentOnBattle.js";
-import ItemListTemplate from "./ItemListTemplate";
+import EquipmentListTemplate from "./EquipmentListTemplate";
 
 export default{
   name : 'EquipmentModal',
   components : {
-    ItemListTemplate
+    EquipmentListTemplate
   },
   computed : {
     items : function(){

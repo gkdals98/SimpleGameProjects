@@ -1,8 +1,6 @@
-import { current_on_battle } from "../core/CurrentOnBattle.js";
-
 class TraitRepository{
   constructor(){
-    const const_trait_data = require('./TraitData.json')
+    const const_trait_data = require('./TraitData.json');
     this.trait_datas = const_trait_data.trait_datas;
   }
 }

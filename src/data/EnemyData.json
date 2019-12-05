@@ -2,6 +2,17 @@
   "enemy_datas" : [
     {
       "enemy_name" : "산간지대 1형태",
+      "hp" : 20,
+      "passive" : [
+        {
+          "effect_name" : "웃음소리",
+          "target" : "player",
+          "duration" : 100,
+          "value" : [
+            1
+          ]
+        }
+      ],
       "skills" : [
         {
           "skill_name" : "할퀴기",
@@ -9,43 +20,62 @@
           "skill_dices" : [
             {
               "dice_type" : "str",
-              "dice_num" : 2
+              "add_dice" : 3
             }
           ],
-          "skill_effect" : {
-
-          }
+          "effect" : [
+            {
+              "effect_name" : "방어 증가",
+              "target" : "enemy",
+              "duration" : 2,
+              "value" : [
+                1
+              ]
+            }
+          ]
         },
+
         {
           "skill_name" : "팔 휘두르기",
           "skill_type" : "defenssive",
           "skill_dices" : [
             {
               "dice_type" : "str",
-              "dice_num" : 2
+              "add_dice" : 2
             }
           ],
-          "skill_effect" : {
-
-          }
+          "effect" : [
+          ]
         },
+
         {
           "skill_name" : "주시",
           "skill_type" : "CC",
           "skill_dices" : [
             {
               "dice_type" : "int",
-              "dice_num" : 2
+              "add_dice" : 2
             }
           ],
-          "skill_effect" : {
-
-          }
+          "effect" : [
+            {
+              "effect_name" : "민첩 감소",
+              "target" : "player",
+              "duration" : 2,
+              "value" : [
+                1
+              ]
+            }
+          ]
         }
       ]
     },
+
+
+
     {
       "enemy_name" : "산간지대 2형태",
+      "hp" : 25,
       "skills" : [
         {
           "skill_name" : "할퀴기",
@@ -53,43 +83,46 @@
           "skill_dices" : [
             {
               "dice_type" : "str",
-              "dice_num" : 2
+              "add_dice" : 3
             }
           ],
-          "skill_effect" : {
-
-          }
+          "effect" : [
+          ]
         },
+
         {
           "skill_name" : "팔 휘두르기",
           "skill_type" : "defenssive",
           "skill_dices" : [
             {
               "dice_type" : "str",
-              "dice_num" : 2
+              "add_dice" : 2
             }
           ],
-          "skill_effect" : {
-
-          }
+          "effect" : [
+          ]
         },
+
         {
           "skill_name" : "주시",
           "skill_type" : "CC",
           "skill_dices" : [
             {
               "dice_type" : "int",
-              "dice_num" : 2
+              "add_dice" : 2
             }
           ],
-          "skill_effect" : {
-
-          }
+          "effect" : [
+          ]
         }
       ]
     },
+
+
+
     {
       "enemy_name" : "산간지대 3형태",
+      "hp" : 15,
       "skills" : [
         {
           "skill_name" : "할퀴기",
@@ -97,38 +130,37 @@
           "skill_dices" : [
             {
               "dice_type" : "str",
-              "dice_num" : 2
+              "add_dice" : 3
             }
           ],
-          "skill_effect" : {
-
-          }
+          "effect" : [
+          ]
         },
+
         {
           "skill_name" : "팔 휘두르기",
           "skill_type" : "defenssive",
           "skill_dices" : [
             {
               "dice_type" : "str",
-              "dice_num" : 2
+              "add_dice" : 2
             }
           ],
-          "skill_effect" : {
-
-          }
+          "effect" : [
+          ]
         },
+
         {
           "skill_name" : "주시",
           "skill_type" : "CC",
           "skill_dices" : [
             {
               "dice_type" : "int",
-              "dice_num" : 2
+              "add_dice" : 2
             }
           ],
-          "skill_effect" : {
-
-          }
+          "effect" : [
+          ]
         }
       ]
     }

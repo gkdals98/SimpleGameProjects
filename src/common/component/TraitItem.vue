@@ -1,7 +1,8 @@
 <template>
-  <div id="trait_item">
+  <div id="trait_item"
+    v-bind:style="trait.trait_theme">
     {{trait.trait_name}}
-    <button @click="selected">{{is_applied}}</button>
+    <button id="trait_select" @click="selected">{{is_applied}}</button>
   </div>
 </template>
 
@@ -28,16 +29,22 @@ export default{
 </script>
 <style scoped lang="scss">
 #trait_item{
-  background : #5F856F;
-  border : 4px solid #000000;
+  border : 4px solid;
   border-radius:9px;
   height: 30px;
   margin-left: 5px;
   margin-top: 5px;
   padding: 1px;
+  font-weight: bolder;
 
   display: flex;
   flex-wrap: wrap;
   align-content: space-around;
+  #trait_select{
+    background: transparent;
+    border : none;
+    font-size: 20px;
+    cursor: pointer;
+  }
 }
 </style>

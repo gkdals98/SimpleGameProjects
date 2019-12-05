@@ -1,12 +1,12 @@
 <template>
-  <div class="item_list_component" v-on:click="selected">
+  <div class="equipment_list_component" v-on:click="selected">
     {{item.item_name}}
   </div>
 </template>
 
 <script>
 export default{
-  name : 'ItemListTemplate',
+  name : 'EquipmentListTemplate',
   methods : {
     selected : function(){
       this.$emit("selected", this.item);
@@ -17,7 +17,7 @@ export default{
 </script>
 
 <style scoped lang="scss">
-.item_list_component{
+.equipment_list_component{
   margin-top: 2px;
   width: 100%;
   height: 55px;
@@ -25,5 +25,10 @@ export default{
   color : #C93A3A;
   text-align: center;
   vertical-align: middle;
+
+  align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
 }
 </style>

@@ -65,14 +65,22 @@ export default{
   flex-wrap: wrap;
   overflow: auto;
   #add_trait{
-    background : #5F856F;
-    border : 4px solid #000000;
+    border : 4px solid;
     border-radius:9px;
     height: 30px;
     width: 30px;
     margin-left: 5px;
     margin-top: 5px;
     padding: 1px;
+    color : balck;
+    border-color : grey;
+    background : red;
+    margin-left: 5px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    cursor: pointer;
   }
 }
 </style>

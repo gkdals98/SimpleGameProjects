@@ -1,0 +1,27 @@
+{
+  "item_datas" : [
+    {
+      "item_name" : "탄약",
+      "limit" : 50,
+      "is_consumable" : false
+    },
+
+
+
+    {
+      "item_name" : "붕대",
+      "limit" : 10,
+      "is_consumable" : true,
+      "effect" : [
+        {
+          "effect_name" : "즉발 회복",
+          "target" : "player",
+          "duration" : 0,
+          "value" : [
+            10
+          ]
+        }
+      ]
+    }
+  ]
+}

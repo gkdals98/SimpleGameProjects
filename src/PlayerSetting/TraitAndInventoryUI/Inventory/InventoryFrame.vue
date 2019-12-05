@@ -4,6 +4,7 @@
 </template>
 
 <script>
+import { current_on_battle } from "../../../core/CurrentOnBattle.js";
 export default{
   name : 'InventoryFrame'
 }
