@@ -1,6 +1,7 @@
 {
   "weapon_datas" : [
     {
+      "identify_number" : 0,
       "item_name" : "K-3",
       "item_type" : "weapon",
       "attack_type" : "range",
@@ -50,7 +51,11 @@
         }
       ]
     },
+
+
     {
+      "identify_number" : 1,
+
       "item_name" : "농장삽",
       "item_type" : "weapon",
       "attack_type" : "close",
@@ -70,7 +75,11 @@
         }
       ]
     },
+
+
     {
+      "identify_number" : 2,
+
       "item_name" : "벌목도끼",
       "item_type" : "weapon",
       "attack_type" : "close",

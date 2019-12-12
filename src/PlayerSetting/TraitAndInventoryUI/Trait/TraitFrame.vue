@@ -11,7 +11,9 @@
       v-bind:applied=true
       @trait_selected="dispose_trait"
     />
-    <div id="add_trait" @click="open_traitlist">+</div>
+    <div id="add_trait" @click="open_traitlist">
+      +
+    </div>
   </div>
 </template>
 
@@ -32,7 +34,7 @@ export default{
   },
   computed : {
     applied_traits : function () {
-      return current_on_battle.state.player.current_traits;
+      return current_on_battle.state.player_current_traits;
     }
   },
   methods : {
@@ -56,7 +58,7 @@ export default{
   height: 185px;
   margin-left: 5px;
   margin-top: 5px;
-  background : #5F856F;
+  background : #1a000d;
   border : 4px solid #000000;
   border-radius:9px;
   align-content: flex-start;
@@ -72,14 +74,12 @@ export default{
     margin-left: 5px;
     margin-top: 5px;
     padding: 1px;
-    color : balck;
+    color : white;
     border-color : grey;
     background : red;
-    margin-left: 5px;
 
     display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
+    align-items: center;
     cursor: pointer;
   }
 }

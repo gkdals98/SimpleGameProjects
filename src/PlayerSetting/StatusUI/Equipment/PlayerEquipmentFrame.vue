@@ -28,13 +28,13 @@ export default{
   },
   computed : {
     current_weapon : function () {
-      return current_on_battle.state.player.current_weapon;
+      return current_on_battle.state.player_current_weapon;
     },
     current_armor : function () {
-      return current_on_battle.state.player.current_armor;
+      return current_on_battle.state.player_current_armor;
     },
     current_backpack : function () {
-      return current_on_battle.state.player.current_backpack;
+      return current_on_battle.state.player_current_backpack;
     }
   },
   methods : {
@@ -64,7 +64,7 @@ export default{
   height: 230px;
   margin-left: 5px;
   margin-top: 5px;
-  background : #6E6E6E;
+  background : #1a000d;
   border : 4px solid #000000;
   border-radius:9px;
   #user_profile{

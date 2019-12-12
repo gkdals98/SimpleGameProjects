@@ -1,76 +1,105 @@
 {
-  "trait_datas" : [
+  "selectable_trait_datas" : [
     {
+      "identify_number" : 0,
       "trait_name" : "기지",
-      "trait_type" : "add_dice",
-      "trait_theme" : {
-        "color" : "white",
-        "background" : "red",
-        "border-color" : "grey"
-      }
+      "trait_description" : "힘 주사위를 1개 더 얻습니다.",
+      "trait_type" : "str"
     },
     {
+      "identify_number" : 1,
       "trait_name" : "재치",
-      "trait_type" : "add_dice",
-      "trait_theme" : {
-        "color" : "white",
-        "background" : "blue",
-        "border-color" : "grey"
-      }
+      "trait_description" : "순발력 주사위를 1개 더 얻습니다.",
+      "trait_type" : "dex"
     },
     {
+      "identify_number" : 2,
       "trait_name" : "현명",
-      "trait_type" : "add_dice",
-      "trait_theme" : {
-        "color" : "white",
-        "background" : "green",
-        "border-color" : "grey"
-      }
+      "trait_description" : "지식 주사위를 1개 더 얻습니다.",
+      "trait_type" : "inteli"
     },
     {
+      "identify_number" : 3,
       "trait_name" : "방어술",
-      "trait_type" : "add_dice",
-      "trait_theme" : {
-        "color" : "white",
-        "background" : "purple",
-        "border-color" : "grey"
-      }
+      "trait_description" : "방어 주사위를 1개 더 얻습니다.",
+      "trait_type" : "def"
     },
     {
+      "identify_number" : 4,
       "trait_name" : "침착함",
-      "trait_type" : "buff",
-      "trait_theme" : {
-        "color" : "balck",
-        "background" : "white",
-        "border-color" : "grey"
-      }
+      "trait_description" : "혼란상태이상을 받을 시 지속시간을 1 적게 받습니다.",
+      "trait_type" : "buff"
     },
     {
+      "identify_number" : 5,
       "trait_name" : "위협",
-      "trait_type" : "debuff",
-      "trait_theme" : {
-        "color" : "balck",
-        "background" : "yellow",
-        "border-color" : "grey"
-      }
+      "trait_description" : "적의 순발력 판정 시, 순발력 수치를 1 감소싵킵니다.",
+      "trait_type" : "debuff"
     },
     {
+      "identify_number" : 6,
       "trait_name" : "골절",
-      "trait_type" : "penalty",
-      "trait_theme" : {
-        "color" : "red",
-        "background" : "black",
-        "border-color" : "red"
-      }
+      "trait_description" : "순발력 판정 시, 순발력 수치를 1 감소시킵니다.",
+      "trait_type" : "penalty"
     },
     {
-      "trait_name" : "광기",
-      "trait_type" : "tracker",
-      "trait_theme" : {
-        "color" : "red",
-        "background" : "brown",
-        "border-color" : "red"
-      }
+      "identify_number" : 7,
+      "trait_name" : "쐐기박기",
+      "trait_description" : "데미지 판정에 성공했다면 데미지를 2 추가합니다.",
+      "trait_type" : "str"
+    },
+    {
+      "identify_number" : 8,
+      "trait_name" : "자기과시",
+      "trait_description" : "자신의 공격 후, 적은 민첩판정을 자신은 민첩판정을 수행합니다. 성공 시 데미지를 1 적게 받으며 다음턴 추가 힘 주사위를 1 얻습니다.",
+      "trait_type" : "dex"
+    },
+    {
+      "identify_number" : 9,
+      "trait_name" : "약점 분석",
+      "trait_description" : "자신의 공격 후, 적은 순발력 판정을, 자신은 지식 판정을 수행합니다. 적의 데이터가 수첩에 기록됩니다.",
+      "trait_type" : "inteli"
+    },
+    {
+      "identify_number" : 10,
+      "trait_name" : "지혈 지식",
+      "trait_description" : "탐색 이벤트에서 지식 판정을 통해 추가 붕대를 획득할 수 있습니다.",
+      "trait_type" : "inteli"
+    }
+  ],
+
+
+
+  "world_trait_datas" : [
+    {
+      "identify_number" : 0,
+      "trait_name" : "웃음소리",
+      "trait_description" : "스트레스 이벤트가 추가됩니다.",
+      "trait_type" : "chaser"
+    },
+    {
+      "identify_number" : 1,
+      "trait_name" : "순풍",
+      "trait_description" : "스트레스 수치가 있다면 매 진행마다 5씩 감소합니다.",
+      "trait_type" : "world"
+    },
+    {
+      "identify_number" : 2,
+      "trait_name" : "시선",
+      "trait_description" : "지켜보는 자를 마주칠 확률이 대폭 증가합니다.",
+      "trait_type" : "chaser"
+    },
+    {
+      "identify_number" : 3,
+      "trait_name" : "도축",
+      "trait_description" : "지켜보는 자를 마주칠 확률이 대폭 증가합니다.",
+      "trait_type" : "chaser"
+    },
+    {
+      "identify_number" : 4,
+      "trait_name" : "물귀신",
+      "trait_description" : "지켜보는 자를 마주칠 확률이 대폭 증가합니다.",
+      "trait_type" : "chaser"
     }
   ]
 }

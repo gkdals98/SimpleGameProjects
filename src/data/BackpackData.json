@@ -1,6 +1,7 @@
 {
   "backpack_datas" : [
     {
+      "identify_number" : 0,
       "item_name" : "기본형 군장",
       "item_type" : "backpack",
       "skills" : [
@@ -15,6 +16,7 @@
       ]
     },
     {
+      "identify_number" : 1,
       "item_name" : "기본형 군장",
       "item_type" : "backpack",
       "skills" : [
@@ -29,6 +31,7 @@
       ]
     },
     {
+      "identify_number" : 2,
       "item_name" : "기본형 군장",
       "item_type" : "backpack",
       "skills" : [

@@ -23,10 +23,13 @@
         </header>
         <div id="items">
           <ItemObject
-            v-for="(trait, index) in unapplied_traits"
-            v-bind:trait="trait"
+            v-for="(item, index) in item_list"
+            v-bind:item="item"
             v-bind:key="index"
-            @trait_selected="trait_selected"
+            v-bind:inventory_point="index"
+            v-bind:in_inventory=false
+            v-bind:is_setting=false
+            @item_selected="item_selected"
           />
         </div>
       </div>
@@ -36,24 +39,29 @@
 
 <script>
 import { item_repository } from "../../../data/ItemRepository.js";
+import { current_on_battle } from "../../../core/CurrentOnBattle.js";
 import ItemObject from "../../../common/component/ItemObject";
 
 export default{
   name : 'ItemModal',
+  props : {selected_inventory_point : Number, visible : Boolean},
   components : {
     ItemObject
   },
   data : function () {
     return {
-      item_list : current_on_battle.state.etc.unapplied_traits
+      item_list : item_repository.getWholeData()
     }
   },
   methods : {
     close : function(){
       this.$emit('close');
     },
-    trait_selected : function(trait){
-      current_on_battle.commit( "addTraits", trait );
+    item_selected : function(item, inventory_point){
+      //성능문제상 UI가 제 때 닫히지 않아 필요.
+      if(this.visible){
+        current_on_battle.commit( "addItem", item );
+      }
       this.$emit('close');
     }
   }
@@ -75,9 +83,9 @@ export default{
   }
 }
 
-#equipment_items{
+#items{
   margin-top: 2px;
-  background:#AAC2A3;
+  background:#1a000d;
   width: 100%;
   height: 573px;
   display: flex;

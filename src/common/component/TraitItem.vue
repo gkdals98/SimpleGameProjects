@@ -1,8 +1,8 @@
 <template>
-  <div id="trait_item"
-    v-bind:style="trait.trait_theme">
+  <div class="trait_item"
+    v-bind:style="trait_theme">
     {{trait.trait_name}}
-    <button id="trait_select" @click="selected">{{is_applied}}</button>
+    <button id="trait_select" @click="selected" v-bind:style="trait_theme">{{is_applied}}</button>
   </div>
 </template>
 
@@ -22,13 +22,76 @@ export default{
       }else{
         return "+";
       }
+    },
+    trait_theme : function() {
+      if(this.trait.trait_type==="str"){
+        return {
+          "color" : "white",
+          "background" : "red",
+          "border-color" : "grey"
+        }
+      }else if(this.trait.trait_type==="dex"){
+        return {
+          "color" : "white",
+          "background" : "blue",
+          "border-color" : "grey"
+        }
+      }else if(this.trait.trait_type==="inteli"){
+        return {
+          "color" : "white",
+          "background" : "green",
+          "border-color" : "grey"
+        }
+      }else if(this.trait.trait_type==="def"){
+        return {
+          "color" : "white",
+          "background" : "purple",
+          "border-color" : "grey"
+        }
+      }else if(this.trait.trait_type==="buff"){
+        return {
+          "color" : "#222624",
+          "background" : "white",
+          "border-color" : "grey"
+        }
+      }else if(this.trait.trait_type==="debuff"){
+        return {
+          "color" : "#222624",
+          "background" : "yellow",
+          "border-color" : "grey"
+        }
+      }else if(this.trait.trait_type==="penalty"){
+        return {
+          "color" : "red",
+          "background" : "black",
+          "border-color" : "red"
+        }
+      }else if(this.trait.trait_type==="chaser"){
+        return {
+          "color" : "red",
+          "background" : "brown",
+          "border-color" : "red"
+        }
+      }else if(this.trait.trait_type==="world"){
+        return {
+          "color" : "white",
+          "background" : "teal",
+          "border-color" : "grey"
+        }
+      }else {
+        return {
+          "color" : "white",
+          "background" : "red",
+          "border-color" : "grey"
+        }
+      }
     }
   }
 
 }
 </script>
 <style scoped lang="scss">
-#trait_item{
+.trait_item{
   border : 4px solid;
   border-radius:9px;
   height: 30px;

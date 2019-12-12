@@ -63,6 +63,10 @@ export default{
 .stat_button{
   font-size: 32px;
   margin-left: 25px;
+
+  &:hover{
+    cursor: pointer;
+  }
 }
 .stat_count{
   color: #fff;

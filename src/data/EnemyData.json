@@ -1,7 +1,8 @@
 {
   "enemy_datas" : [
     {
-      "enemy_name" : "산간지대 1형태",
+      "identify_number" : 0,
+      "enemy_name" : "긁어대는 것",
       "hp" : 20,
       "passive" : [
         {
@@ -74,7 +75,9 @@
 
 
     {
-      "enemy_name" : "산간지대 2형태",
+      "identify_number" : 1,
+
+      "enemy_name" : "비명지르는 자",
       "hp" : 25,
       "skills" : [
         {
@@ -121,7 +124,9 @@
 
 
     {
-      "enemy_name" : "산간지대 3형태",
+      "identify_number" : 2,
+
+      "enemy_name" : "검게 변한 산고양이",
       "hp" : 15,
       "skills" : [
         {

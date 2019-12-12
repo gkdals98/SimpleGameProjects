@@ -31,16 +31,16 @@ export default{
   },
   computed : {
     current_str : function () {
-      return current_on_battle.state.player.current_str_dices;
+      return current_on_battle.state.player_current_str_dices;
     },
     current_dex : function () {
-      return current_on_battle.state.player.current_dex_dices;
+      return current_on_battle.state.player_current_dex_dices;
     },
     current_int : function () {
-      return current_on_battle.state.player.current_int_dices;
+      return current_on_battle.state.player_current_int_dices;
     },
     current_def : function () {
-      return current_on_battle.state.player.current_def_dices
+      return current_on_battle.state.player_current_def_dices
 
       f_dices;
     }
@@ -103,16 +103,6 @@ export default{
 </script>
 
 <style scoped lang="scss">
-// #player_stat_frame{
-//   position: absolute;
-//   width: 312px;
-//   height: 235px;
-//   margin-left: 5px;
-//   margin-top: 250px;
-//   background : #6E6E6E;
-//   border : 4px solid #000000;
-//   border-radius:9px;
-// }
 #player_stat_frame {
   display: flex;
   position: absolute;
@@ -124,7 +114,7 @@ export default{
   margin-top: 250px;
   border : 4px solid #000000;
   border-radius:9px;
-  background: #60B99A;
+  background: #1a000d;
 }
 .flex-item {
   display: inline-flex;

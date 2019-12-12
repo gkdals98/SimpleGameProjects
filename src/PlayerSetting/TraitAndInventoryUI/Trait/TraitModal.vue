@@ -21,7 +21,7 @@
             </button>
           </slot>
         </header>
-        <div id="equipment_items">
+        <div id="trait_select_div">
           <TraitItem
             v-for="(trait, index) in unapplied_traits"
             v-bind:trait="trait"
@@ -45,7 +45,7 @@ export default{
   },
   computed : {
     unapplied_traits : function(){
-      return current_on_battle.state.etc.unapplied_traits;
+      return current_on_battle.state.unapplied_traits;
     }
   },
   methods : {
@@ -75,13 +75,14 @@ export default{
   }
 }
 
-#equipment_items{
+#trait_select_div{
   margin-top: 2px;
-  background:#AAC2A3;
+  background:#1a000d;
   width: 100%;
   height: 573px;
   display: flex;
   flex-wrap: wrap;
   overflow: auto;
+  align-content: flex-start;
 }
 </style>

@@ -1,11 +1,26 @@
 <template>
   <div id="enemy_setting_frame">
+    <EnemySelectFrame/>
+    <AreaSelectFrame @area_selected="areaSelected"/>
+    <button id="initial">시작상태로</button>
+    <button id="clear">전부 제거</button>
   </div>
 </template>
 
 <script>
+import EnemySelectFrame from './EnemySelectUI/EnemySelectFrame';
+import AreaSelectFrame from './AreaSelectUI/AreaSelectFrame';
 export default{
-  name : 'EnemySettingFrame'
+  name : 'EnemySettingFrame',
+  components : {
+    EnemySelectFrame,
+    AreaSelectFrame
+  },
+  methods : {
+    areaSelected : function (identify_number){
+      console.log(identify_number)
+    }
+  }
 }
 </script>
 
@@ -16,7 +31,35 @@ export default{
   height: 520px;
   margin-left: -328px;
   margin-top: -260px;
-  background : #A6A6A6;
+  background : #1a000d;
   border-radius:9px;
+  #clear{
+    margin-left: 170px;
+    margin-top: 420px;
+    position: absolute;
+    width: 165px;
+    height: 90px;
+    border : 4px solid #000000;
+    border-radius:9px;
+    font-weight:bolder;
+    font-size: 20px;
+    &:hover{
+      border : 4px solid #b3b3cc;
+    }
+  }
+  #initial{
+    margin-left: 0px;
+    margin-top: 420px;
+    position: absolute;
+    width: 165px;
+    height: 90px;
+    border : 4px solid #000000;
+    border-radius:9px;
+    font-weight:bolder;
+    font-size: 20px;
+    &:hover{
+      border : 4px solid #b3b3cc;
+    }
+  }
 }
 </style>

@@ -2,8 +2,8 @@
   <div id="player_setting_frame">
     <PlayerStatusFrame/>
     <TraitAndInventoryFrame/>
-    <button id="clear">전부 제거</button>
     <button id="initial">시작상태로</button>
+    <button id="clear">전부 제거</button>
   </div>
 </template>
 
@@ -26,7 +26,7 @@ export default{
   height: 520px;
   margin-left: -338px;
   margin-top: -260px;
-  background : #A6A6A6;
+  background : #1a000d;
   border-radius:9px;
   #clear{
     margin-left: 170px;

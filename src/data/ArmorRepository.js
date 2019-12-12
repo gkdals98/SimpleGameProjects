@@ -10,4 +10,8 @@ ArmorRepository.prototype.getWholeData = function(){
   return this.armor_datas;
 }
 
+ArmorRepository.prototype.getDataByIdentifyNumber = function(identify_number){
+  return this.armor_datas[identify_number];
+}
+
 export let armor_repository = new ArmorRepository();

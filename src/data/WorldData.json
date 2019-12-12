@@ -1,0 +1,93 @@
+{
+  "world_datas" : [
+    {
+      "identify_number" : 0,
+
+      "area_name" : "산간지대",
+      "difficulty" : 1,
+      "km" : 10,
+      "enemys" : [0, 1, 2],
+      "chaser" : 0,
+      "events" : [],
+      "world_trait" : [1],
+      "theme" : {
+        "title" : {
+          "border-color" : "grey",
+          "background-color" : "#215237",
+          "color" : "#7CBF9A"
+        },
+        "text" : {
+          "background-color" : "#7CBF9A",
+          "color" : "#083B1F"
+        }
+      }
+    },
+    {
+      "identify_number" : 1,
+
+      "area_name" : "농가",
+      "difficulty" : 1,
+      "km" : 10,
+      "enemys" : [0, 1, 2],
+      "chaser" : 1,
+      "events" : [],
+      "world_trait" : [1],
+      "theme" : {
+        "title" : {
+          "border-color" : "grey",
+          "background-color" : "#0A7042",
+          "color" : "#023004"
+        },
+        "text" : {
+          "background-color" : "#7CBF9A",
+          "color" : "#083B1F"
+        }
+      }
+    },
+    {
+      "identify_number" : 2,
+
+      "area_name" : "축산 지역",
+      "difficulty" : 1,
+      "km" : 10,
+      "enemys" : [0, 1, 2],
+      "chaser" : 2,
+      "events" : [],
+      "world_trait" : [1],
+      "theme" : {
+        "title" : {
+          "border-color" : "grey",
+          "background-color" : "#AD0003",
+          "color" : "white"
+        },
+        "text" : {
+          "background-color" : "#7CBF9A",
+          "color" : "#083B1F"
+        }
+      }
+    },
+    {
+      "identify_number" : 3,
+
+      "area_name" : "계곡",
+      "difficulty" : 1,
+      "km" : 10,
+      "enemys" : [0, 1, 2],
+      "chaser" : 3,
+      "events" : [],
+      "world_trait" : [1],
+      "theme" : {
+        "title" : {
+          "border-color" : "grey",
+          "background-color" : "#344F91",
+          "color" : "#958DCC"
+        },
+        "text" : {
+          "background-color" : "#7CBF9A",
+          "color" : "#083B1F"
+        }
+      }
+    }
+
+  ]
+}

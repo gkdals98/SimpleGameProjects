@@ -10,4 +10,8 @@ BackpackRepository.prototype.getWholeData = function(){
   return this.backpack_datas;
 }
 
+BackpackRepository.prototype.getDataByIdentifyNumber = function(identify_number){
+  return this.backpack_datas[identify_number];
+}
+
 export let backpack_repository = new BackpackRepository();

@@ -10,4 +10,8 @@ WeaponRepository.prototype.getWholeData = function(){
   return this.weapon_datas;
 }
 
+WeaponRepository.prototype.getDataByIdentifyNumber = function(identify_number){
+  return this.weapon_datas[identify_number];
+}
+
 export let weapon_repository = new WeaponRepository();
