@@ -6,9 +6,10 @@
     />
     <TraitItem
       v-for="(trait, index) in applied_traits"
-      v-bind:trait="trait"
       v-bind:key="index"
+      v-bind:trait="trait"
       v-bind:applied=true
+      v-bind:buttonVisible=true
       @trait_selected="dispose_trait"
     />
     <div id="add_trait" @click="open_traitlist">
@@ -69,10 +70,10 @@ export default{
   #add_trait{
     border : 4px solid;
     border-radius:9px;
-    height: 30px;
-    width: 30px;
+    width: 25px;
+    height: 25px;
     margin-left: 5px;
-    margin-top: 5px;
+    margin-top: 3px;
     padding: 1px;
     color : white;
     border-color : grey;

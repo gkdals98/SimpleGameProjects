@@ -4,6 +4,11 @@
       "identify_number" : 0,
       "enemy_name" : "긁어대는 것",
       "hp" : 20,
+
+      "str_dices" : 1,
+      "dex_dices" : 1,
+      "def_dices" : 0,
+
       "passive" : [
         {
           "effect_name" : "웃음소리",
@@ -77,8 +82,13 @@
     {
       "identify_number" : 1,
 
-      "enemy_name" : "비명지르는 자",
+      "enemy_name" : "비명지르는 것",
       "hp" : 25,
+
+      "str_dices" : 1,
+      "dex_dices" : 1,
+      "def_dices" : 1,
+
       "skills" : [
         {
           "skill_name" : "할퀴기",
@@ -128,6 +138,331 @@
 
       "enemy_name" : "검게 변한 산고양이",
       "hp" : 15,
+
+      "str_dices" : 1,
+      "dex_dices" : 1,
+      "def_dices" : 1,
+
+      "skills" : [
+        {
+          "skill_name" : "할퀴기",
+          "skill_type" : "offenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "add_dice" : 3
+            }
+          ],
+          "effect" : [
+          ]
+        },
+
+        {
+          "skill_name" : "팔 휘두르기",
+          "skill_type" : "defenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "add_dice" : 2
+            }
+          ],
+          "effect" : [
+          ]
+        },
+
+        {
+          "skill_name" : "주시",
+          "skill_type" : "CC",
+          "skill_dices" : [
+            {
+              "dice_type" : "int",
+              "add_dice" : 2
+            }
+          ],
+          "effect" : [
+          ]
+        }
+      ]
+    },
+
+
+
+    {
+      "identify_number" : 3,
+
+      "enemy_name" : "기어오는 것",
+      "hp" : 25,
+
+      "str_dices" : 1,
+      "dex_dices" : 1,
+      "def_dices" : 1,
+
+      "skills" : [
+        {
+          "skill_name" : "할퀴기",
+          "skill_type" : "offenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "add_dice" : 3
+            }
+          ],
+          "effect" : [
+          ]
+        },
+
+        {
+          "skill_name" : "팔 휘두르기",
+          "skill_type" : "defenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "add_dice" : 2
+            }
+          ],
+          "effect" : [
+          ]
+        },
+
+        {
+          "skill_name" : "주시",
+          "skill_type" : "CC",
+          "skill_dices" : [
+            {
+              "dice_type" : "int",
+              "add_dice" : 2
+            }
+          ],
+          "effect" : [
+          ]
+        }
+      ]
+    },
+
+
+    {
+      "identify_number" : 4,
+
+      "enemy_name" : "웅크린 무언가",
+      "hp" : 25,
+
+      "str_dices" : 1,
+      "dex_dices" : 1,
+      "def_dices" : 1,
+
+      "skills" : [
+        {
+          "skill_name" : "할퀴기",
+          "skill_type" : "offenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "add_dice" : 3
+            }
+          ],
+          "effect" : [
+          ]
+        },
+
+        {
+          "skill_name" : "팔 휘두르기",
+          "skill_type" : "defenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "add_dice" : 2
+            }
+          ],
+          "effect" : [
+          ]
+        },
+
+        {
+          "skill_name" : "주시",
+          "skill_type" : "CC",
+          "skill_dices" : [
+            {
+              "dice_type" : "int",
+              "add_dice" : 2
+            }
+          ],
+          "effect" : [
+          ]
+        }
+      ]
+    },
+
+
+
+    {
+      "identify_number" : 5,
+
+      "enemy_name" : "츄파카브라",
+      "hp" : 25,
+
+      "str_dices" : 1,
+      "dex_dices" : 1,
+      "def_dices" : 1,
+
+      "skills" : [
+        {
+          "skill_name" : "할퀴기",
+          "skill_type" : "offenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "add_dice" : 3
+            }
+          ],
+          "effect" : [
+          ]
+        },
+
+        {
+          "skill_name" : "팔 휘두르기",
+          "skill_type" : "defenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "add_dice" : 2
+            }
+          ],
+          "effect" : [
+          ]
+        },
+
+        {
+          "skill_name" : "주시",
+          "skill_type" : "CC",
+          "skill_dices" : [
+            {
+              "dice_type" : "int",
+              "add_dice" : 2
+            }
+          ],
+          "effect" : [
+          ]
+        }
+      ]
+    },
+
+
+    {
+      "identify_number" : 6,
+
+      "enemy_name" : "흡혈 벌레",
+      "hp" : 25,
+
+      "str_dices" : 1,
+      "dex_dices" : 1,
+      "def_dices" : 1,
+
+      "skills" : [
+        {
+          "skill_name" : "할퀴기",
+          "skill_type" : "offenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "add_dice" : 3
+            }
+          ],
+          "effect" : [
+          ]
+        },
+
+        {
+          "skill_name" : "팔 휘두르기",
+          "skill_type" : "defenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "add_dice" : 2
+            }
+          ],
+          "effect" : [
+          ]
+        },
+
+        {
+          "skill_name" : "주시",
+          "skill_type" : "CC",
+          "skill_dices" : [
+            {
+              "dice_type" : "int",
+              "add_dice" : 2
+            }
+          ],
+          "effect" : [
+          ]
+        }
+      ]
+    },
+
+
+    {
+      "identify_number" : 7,
+
+      "enemy_name" : "꺾인 목",
+      "hp" : 25,
+
+      "str_dices" : 1,
+      "dex_dices" : 1,
+      "def_dices" : 1,
+
+      "skills" : [
+        {
+          "skill_name" : "할퀴기",
+          "skill_type" : "offenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "add_dice" : 3
+            }
+          ],
+          "effect" : [
+          ]
+        },
+
+        {
+          "skill_name" : "팔 휘두르기",
+          "skill_type" : "defenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "add_dice" : 2
+            }
+          ],
+          "effect" : [
+          ]
+        },
+
+        {
+          "skill_name" : "주시",
+          "skill_type" : "CC",
+          "skill_dices" : [
+            {
+              "dice_type" : "int",
+              "add_dice" : 2
+            }
+          ],
+          "effect" : [
+          ]
+        }
+      ]
+    },
+
+
+    {
+      "identify_number" : 8,
+
+      "enemy_name" : "검은 물고기",
+      "hp" : 25,
+
+      "str_dices" : 1,
+      "dex_dices" : 1,
+      "def_dices" : 1,
+
       "skills" : [
         {
           "skill_name" : "할퀴기",

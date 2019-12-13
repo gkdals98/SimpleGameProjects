@@ -9,10 +9,9 @@
       "enemys" : [0, 1, 2],
       "chaser" : 0,
       "events" : [],
-      "world_trait" : [1],
+      "area_trait" : 1,
       "theme" : {
         "title" : {
-          "border-color" : "grey",
           "background-color" : "#215237",
           "color" : "#7CBF9A"
         },
@@ -28,13 +27,12 @@
       "area_name" : "농가",
       "difficulty" : 1,
       "km" : 10,
-      "enemys" : [0, 1, 2],
+      "enemys" : [0, 1, 3, 4],
       "chaser" : 1,
       "events" : [],
-      "world_trait" : [1],
+      "area_trait" : 1,
       "theme" : {
         "title" : {
-          "border-color" : "grey",
           "background-color" : "#0A7042",
           "color" : "#023004"
         },
@@ -50,13 +48,12 @@
       "area_name" : "축산 지역",
       "difficulty" : 1,
       "km" : 10,
-      "enemys" : [0, 1, 2],
+      "enemys" : [0, 1, 4, 5, 7],
       "chaser" : 2,
       "events" : [],
-      "world_trait" : [1],
+      "area_trait" : 1,
       "theme" : {
         "title" : {
-          "border-color" : "grey",
           "background-color" : "#AD0003",
           "color" : "white"
         },
@@ -72,13 +69,12 @@
       "area_name" : "계곡",
       "difficulty" : 1,
       "km" : 10,
-      "enemys" : [0, 1, 2],
+      "enemys" : [0, 1, 4, 6, 8],
       "chaser" : 3,
       "events" : [],
-      "world_trait" : [1],
+      "area_trait" : 1,
       "theme" : {
         "title" : {
-          "border-color" : "grey",
           "background-color" : "#344F91",
           "color" : "#958DCC"
         },

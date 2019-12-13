@@ -24,8 +24,8 @@
         <div id="equipment_items">
           <EquipmentListTemplate
             v-for="(item, index) in items"
-            v-bind:item="item"
             v-bind:key="index"
+            v-bind:item="item"
             @selected="item_selected"
           />
         </div>

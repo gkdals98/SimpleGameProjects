@@ -2,14 +2,14 @@
   <div class="trait_item"
     v-bind:style="trait_theme">
     {{trait.trait_name}}
-    <button id="trait_select" @click="selected" v-bind:style="trait_theme">{{is_applied}}</button>
+    <button id="trait_select" @click="selected" v-bind:style="trait_theme" v-show="buttonVisible">{{is_applied}}</button>
   </div>
 </template>
 
 <script>
 export default{
   name : 'TraitItem',
-  props : {trait : Object, applied : Boolean},
+  props : {trait : Object, applied : Boolean, buttonVisible : Boolean},
   methods : {
     selected : function(){
       this.$emit('trait_selected', this.trait);
@@ -92,11 +92,11 @@ export default{
 </script>
 <style scoped lang="scss">
 .trait_item{
-  border : 4px solid;
-  border-radius:9px;
-  height: 30px;
+  border : 2px solid;
+  border-radius:5px;
+  height: 25px;
   margin-left: 5px;
-  margin-top: 5px;
+  margin-top: 3px;
   padding: 1px;
   font-weight: bolder;
 

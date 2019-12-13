@@ -10,7 +10,12 @@ export const current_on_battle = new Vuex.Store({
   // 플레이어의 값들, 적의 값들,
 
   state : {
-    battle_current_round : 0,
+    world_current_km : 0,
+    world_current_area_identifynum : 0,
+    world_current_event_type : "event",
+    world_current_event_identifynum : 0,
+
+    //전투 진행은 Controller의 데이터지만 갱신을 위해 vue를 사용.
     battle_current_phase : 0,
     battle_current_text : "모의 전투 수행",
     battle_current_Choicable : [
@@ -88,6 +93,23 @@ export const current_on_battle = new Vuex.Store({
 
 
   mutations: {
+    /*
+    월드 컨트롤
+    */
+    //지역이 옮겨간 경우, 이동값이 0가 되고 현재 지역이 바뀐다.
+    setArea (state, identify_number){
+      state.world_current_km = 0;
+      state.world_current_area_identifynum = identify_number;
+    },
+    //진행 시 km 증가.
+    setProgress (state){
+      state.world_current_km++;
+    },
+    // Event가 옮겨간 경우,
+    setEvent (state, event_type, identify_number){
+      state.world_current_event_type = event_type;
+      state.world_current_event_identifynum = identify_number;
+    },
     movePhase (state, phase){
       state.battle_current_phase = phase;
     },

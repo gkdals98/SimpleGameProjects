@@ -2,8 +2,8 @@
   <div id="area_select_frame">
     <AreaItem
       v-for="(area, index) in world_data"
-      v-bind:area="area"
       v-bind:key="index"
+      v-bind:area="area"
       @area_selected="areaSelected"
     />
   </div>
@@ -40,6 +40,11 @@ export default{
   background : #cccc00;
   border : 4px solid #000000;
   border-radius:9px;
+  font-weight: bolder;
+
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
 
   overflow: auto;
 }

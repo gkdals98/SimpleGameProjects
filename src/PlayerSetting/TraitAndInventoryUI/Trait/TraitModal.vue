@@ -26,6 +26,7 @@
             v-for="(trait, index) in unapplied_traits"
             v-bind:trait="trait"
             v-bind:key="index"
+            v-bind:buttonVisible=true
             @trait_selected="trait_selected"
           />
         </div>

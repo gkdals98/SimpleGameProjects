@@ -2,26 +2,59 @@
   "chaser_datas" : [
     {
       "identify_number" : 0,
-      "chaser_name" : "뒤틀린 자",
+
+      "enemy_name" : "뒤틀린 자",
       "hp" : 45,
+
+      "str_dices" : 3,
+      "dex_dices" : 3,
+      "def_dices" : 3,
+
       "chaser_trait" : 0
     },
+
+
+
     {
       "identify_number" : 1,
-      "chaser_name" : "지켜보는 자",
+
+      "enemy_name" : "지켜보는 자",
       "hp" : 45,
+
+      "str_dices" : 1,
+      "dex_dices" : 1,
+      "def_dices" : 2,
+
       "chaser_trait" : 2
     },
+
+
+
     {
       "identify_number" : 2,
-      "chaser_name" : "도살자",
+
+      "enemy_name" : "도살자",
       "hp" : 45,
+
+      "str_dices" : 2,
+      "dex_dices" : 1,
+      "def_dices" : 3,
+
       "chaser_trait" : 3
     },
+
+
+
     {
       "identify_number" : 3,
-      "chaser_name" : "가라앉히는 자",
+
+      "enemy_name" : "가라앉히는 자",
       "hp" : 45,
+
+      "str_dices" : 4,
+      "dex_dices" : 1,
+      "def_dices" : 2,
+
       "chaser_trait" : 4
     }
   ]

@@ -38,7 +38,7 @@
         {
           "skill_name" : "재장전",
           "skill_link" : 2,
-          "skill_type" : "offenssive",
+          "skill_type" : "effective",
           "skill_dices" : [
             {
               "dice_type" : "str",
@@ -48,30 +48,6 @@
           "skill_effect" : {
 
           }
-        }
-      ]
-    },
-
-
-    {
-      "identify_number" : 1,
-
-      "item_name" : "농장삽",
-      "item_type" : "weapon",
-      "attack_type" : "close",
-      "weapon_type" : "shovel",
-      "skills" : [
-        {
-          "skill_name" : "찌르기",
-          "skill_link" : 0
-        },
-        {
-          "skill_name" : "휘두르기",
-          "skill_link" : 1
-        },
-        {
-          "skill_name" : "거리 벌리기",
-          "skill_link" : 2
         }
       ]
     },
