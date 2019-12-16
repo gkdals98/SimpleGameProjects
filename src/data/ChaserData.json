@@ -10,7 +10,74 @@
       "dex_dices" : 3,
       "def_dices" : 3,
 
-      "chaser_trait" : 0
+      "chaser_trait" : 0,
+
+      "passive" : [
+        {
+          "effect_name" : "웃음소리",
+          "target" : "player",
+          "duration" : 100,
+          "value" : [
+            1
+          ]
+        }
+      ],
+      "skills" : [
+        {
+          "skill_name" : "할퀴기",
+          "skill_type" : "offenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "add_dice" : 3
+            }
+          ],
+          "effect" : [
+            {
+              "effect_name" : "방어 증가",
+              "target" : "enemy",
+              "duration" : 2,
+              "value" : [
+                1
+              ]
+            }
+          ]
+        },
+
+        {
+          "skill_name" : "팔 휘두르기",
+          "skill_type" : "defenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "add_dice" : 2
+            }
+          ],
+          "effect" : [
+          ]
+        },
+
+        {
+          "skill_name" : "주시",
+          "skill_type" : "CC",
+          "skill_dices" : [
+            {
+              "dice_type" : "int",
+              "add_dice" : 2
+            }
+          ],
+          "effect" : [
+            {
+              "effect_name" : "민첩 감소",
+              "target" : "player",
+              "duration" : 2,
+              "value" : [
+                1
+              ]
+            }
+          ]
+        }
+      ]
     },
 
 
@@ -26,6 +93,74 @@
       "def_dices" : 2,
 
       "chaser_trait" : 2
+      ,
+
+      "passive" : [
+        {
+          "effect_name" : "웃음소리",
+          "target" : "player",
+          "duration" : 100,
+          "value" : [
+            1
+          ]
+        }
+      ],
+      "skills" : [
+        {
+          "skill_name" : "할퀴기",
+          "skill_type" : "offenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "add_dice" : 3
+            }
+          ],
+          "effect" : [
+            {
+              "effect_name" : "방어 증가",
+              "target" : "enemy",
+              "duration" : 2,
+              "value" : [
+                1
+              ]
+            }
+          ]
+        },
+
+        {
+          "skill_name" : "팔 휘두르기",
+          "skill_type" : "defenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "add_dice" : 2
+            }
+          ],
+          "effect" : [
+          ]
+        },
+
+        {
+          "skill_name" : "주시",
+          "skill_type" : "CC",
+          "skill_dices" : [
+            {
+              "dice_type" : "int",
+              "add_dice" : 2
+            }
+          ],
+          "effect" : [
+            {
+              "effect_name" : "민첩 감소",
+              "target" : "player",
+              "duration" : 2,
+              "value" : [
+                1
+              ]
+            }
+          ]
+        }
+      ]
     },
 
 
@@ -41,6 +176,74 @@
       "def_dices" : 3,
 
       "chaser_trait" : 3
+      ,
+
+      "passive" : [
+        {
+          "effect_name" : "웃음소리",
+          "target" : "player",
+          "duration" : 100,
+          "value" : [
+            1
+          ]
+        }
+      ],
+      "skills" : [
+        {
+          "skill_name" : "할퀴기",
+          "skill_type" : "offenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "add_dice" : 3
+            }
+          ],
+          "effect" : [
+            {
+              "effect_name" : "방어 증가",
+              "target" : "enemy",
+              "duration" : 2,
+              "value" : [
+                1
+              ]
+            }
+          ]
+        },
+
+        {
+          "skill_name" : "팔 휘두르기",
+          "skill_type" : "defenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "add_dice" : 2
+            }
+          ],
+          "effect" : [
+          ]
+        },
+
+        {
+          "skill_name" : "주시",
+          "skill_type" : "CC",
+          "skill_dices" : [
+            {
+              "dice_type" : "int",
+              "add_dice" : 2
+            }
+          ],
+          "effect" : [
+            {
+              "effect_name" : "민첩 감소",
+              "target" : "player",
+              "duration" : 2,
+              "value" : [
+                1
+              ]
+            }
+          ]
+        }
+      ]
     },
 
 
@@ -56,6 +259,74 @@
       "def_dices" : 2,
 
       "chaser_trait" : 4
+      ,
+
+      "passive" : [
+        {
+          "effect_name" : "웃음소리",
+          "target" : "player",
+          "duration" : 100,
+          "value" : [
+            1
+          ]
+        }
+      ],
+      "skills" : [
+        {
+          "skill_name" : "할퀴기",
+          "skill_type" : "offenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "add_dice" : 3
+            }
+          ],
+          "effect" : [
+            {
+              "effect_name" : "방어 증가",
+              "target" : "enemy",
+              "duration" : 2,
+              "value" : [
+                1
+              ]
+            }
+          ]
+        },
+
+        {
+          "skill_name" : "팔 휘두르기",
+          "skill_type" : "defenssive",
+          "skill_dices" : [
+            {
+              "dice_type" : "str",
+              "add_dice" : 2
+            }
+          ],
+          "effect" : [
+          ]
+        },
+
+        {
+          "skill_name" : "주시",
+          "skill_type" : "CC",
+          "skill_dices" : [
+            {
+              "dice_type" : "int",
+              "add_dice" : 2
+            }
+          ],
+          "effect" : [
+            {
+              "effect_name" : "민첩 감소",
+              "target" : "player",
+              "duration" : 2,
+              "value" : [
+                1
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

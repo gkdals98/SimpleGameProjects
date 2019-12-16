@@ -1,6 +1,6 @@
 <template>
   <div id="enemy_setting_frame">
-    <EnemySelectFrame @enemy_specified="enemySpecified" @chaser_selected="chaserSelected"/>
+    <EnemySelectFrame/>
     <AreaSelectFrame @area_selected="areaSelected"/>
     <button id="initial">시작상태로</button>
     <button id="clear">전부 제거</button>
@@ -31,12 +31,6 @@ export default{
   methods : {
     areaSelected : function (identify_number){
       current_on_battle.commit("setArea", identify_number);
-    },
-    chaserSelected : function (chaser_identify_number){
-      current_on_battle.commit("setEvent", "chaser", chaser_identify_number);
-    },
-    enemySpecified : function (identify_number){
-      current_on_battle.commit("setEvent", "battle", identify_number);
     }
   }
 }

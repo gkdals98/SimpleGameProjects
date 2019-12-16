@@ -1,19 +1,19 @@
 <template>
   <div id="main_tab">
     <div class="container">
-      <input type="radio" name="tabs" id="tab_3"/>
+      <input type="radio" name="tabs" id="tab_3" v-model="tab_number" value="3"/>
       <label for="tab_3">
         <div class="content">Hello, I'm #</div>
       </label>
-      <input type="radio" name="tabs" id="tab_2"/>
+      <input type="radio" name="tabs" id="tab_2" v-model="tab_number" value="2"/>
       <label for="tab_2">
         <div class="content"><EnemySettingFrame/></div>
       </label>
-      <input type="radio" name="tabs" id="tab_1"/>
+      <input type="radio" name="tabs" id="tab_1" v-model="tab_number" value="1"/>
       <label for="tab_1">
         <div class="content"><PlayerSettingFrame/></div>
       </label>
-      <input type="radio" name="tabs" id="tab_0"/>
+      <input type="radio" name="tabs" id="tab_0" v-model="tab_number" value="0"/>
       <label for="tab_0">
         <div class="content"><BattleFrame/></div>
       </label>
@@ -33,9 +33,21 @@ export default {
     PlayerSettingFrame,
     EnemySettingFrame
   },
+  data : function (){
+    return {
+      tab_number : 0
+    }
+  },
+  watch : {
+    tab_number : function (newVal, oldVal){
+      if(newVal == 1 || newVal == 2){
+        this.tabOut();
+      }
+    }
+  },
   methods : {
-    SampleMe : function(){
-      console.log("Haha");
+    tabOut : function() {
+      console.log("진행 데이터를 전부 날리는 동작 수행")
     }
   }
 }

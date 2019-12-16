@@ -1,0 +1,164 @@
+{
+  "default_event_datas" : [
+    {
+      "identify_number" : 0,
+
+      "event_name" : "서막",
+      "event_type" : "text",
+      "ready_text" : "머리가 욱신거린다...",
+
+      "progress" : {
+        "texts" : [
+          {
+            "type" : "normal",
+            "text" : "무슨 일이 일어났던거지?"
+          },
+          {
+            "type" : "normal",
+            "text" : "부대에서 근무를 서던 중, 갑자기 실제 상황이 하달되었고..."
+          },
+          {
+            "type" : "normal",
+            "text" : "우리는 급히 무장한 뒤 차량에 탑승해 이동했다. 그러다 갑자기 비명소리가 들렸고..."
+          },
+          {
+            "type" : "normal",
+            "text" : "모르겠어... 기억이 나질 않아."
+          },
+          {
+            "type" : "normal",
+            "text" : "움직이자..."
+          }
+        ]
+      },
+      "rooting" : {
+        "type" : "no",
+        "event_add" : "yes",
+        "added_event" : [0]
+      }
+    },
+
+
+
+    {
+      "identify_number" : 1,
+
+      "event_name" : "과일 나무",
+      "event_type" : "choice",
+      "ready_text" : "길을 가던 도중, 잘 익은 감나무를 발견했다.",
+
+      "progress" : {
+        "texts" : [
+        {
+          "type" : "select",
+          "text" : "주변은 조용하다. 감나무는 높지만 식량을 얻을 소중한 기회이다.",
+          "choice" : [
+            {
+              "link" : 0,
+              "text" : "감을 따기위해 나무를 탄다. - 순발력 판정 3 이상. 실패시 8 데미지.",
+              "needed" : {
+                "type" : "none"
+              }
+            },
+            {
+              "text" : "위험을 감수할 수는 없다.",
+              "link" : 1
+              "needed" : {
+                "type" : "none"
+              }
+            }
+          ]
+        }
+      },
+      "choice_link" : [
+        {
+          "roll_phase" : {
+            "type" : "dice_roll",
+            "text" : "생각보다 타고 올라갈만한 나무다. 이 높이라면....!",
+            "need_dice" : {
+              "dice_type" : "dex",
+              "value" : "3"
+            }
+          },
+          "success" : {
+            "type" : "normal",
+            "text" : "손에 잡힌 감나무 가지를 꺾는데 성공했다!"
+          },
+          "fail" : {
+            "type" : "normal",
+            "text" : "감을 잡으려는 순간, 발을 헛디디고 말았다."
+          }
+        },
+        {
+          "type" : "nomal"
+          "text" : "아쉽지만 지금은 움직여야할 때다."
+        }
+      ],
+      "rooting" : {
+        "type" : "passable_judg",
+        "success" : {
+          "type" : "rooting",
+          "text" : "식량을 얻은건 기쁘지만 아무래도 소리가 컸다. 그만 움직여야할 때다.",
+          "value" : {
+            "type" : "gain_item"
+            "which" : 4,
+            "amount" : 2
+          }
+        },
+        "fail" : {
+          "type" : "penalty",
+          "text" : "바닥에 추락하며 상처를 입고 말았다."
+          "value" : {
+            "type" : "loss",
+            "which" : "hp",
+            "amount" : 8
+          }
+        },
+        "pass" : {
+          "type" : "normal",
+          "text" : "아직은 다른 곳에서도 음식을 구할 수 있을테니..."
+        },
+        "event_add" : "no"
+      }
+    }
+  ],
+
+  "added_event_datas" : [
+    {
+      "identify_number" : 0,
+
+      "area_to_added" : 0,
+      "is_fixed" : "yes",
+      "fixed_time" : 3,
+
+      "event_name" : "팔의 변화",
+      "event_type" : "text",
+      "ready_text" : "팔에 무언가 변화가 생겼다는 걸 눈치챈 것은 시간이 조금 지나서였다.",
+
+      "progress" : {
+        "texts" : [
+          {
+            "type" : "normal",
+            "text" : "뭐지 이 검은 것은?"
+          },
+          {
+            "type" : "normal",
+            "text" : "팔 속에서 무언가 꿈틀거리는 기분이야...."
+          }
+        ]
+      },
+      "rooting" : {
+        "type" : "confirmed",
+        "success" : {
+          "type" : "rooting",
+          "text" : "서둘러.... 서둘러서 병원을 찾아야겠어.",
+          "value" : {
+            "type" : "gain_trait"
+            "which" : 11
+          }
+        }
+      }
+
+    }
+  ]
+}

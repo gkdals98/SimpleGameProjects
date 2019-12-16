@@ -15,8 +15,14 @@ export const current_on_battle = new Vuex.Store({
     world_current_event_type : "event",
     world_current_event_identifynum : 0,
 
-    //전투 진행은 Controller의 데이터지만 갱신을 위해 vue를 사용.
-    battle_current_phase : 0,
+    added_event_queue : {
+      //event가 add되면 변수명을 붙여 이 개체에 추가한다. 혹은 이미 있던 객체에 add한다.
+      //다만 vue 내에서 계산할 때 배열의 길이조차 못보는지는 테스트 필요.
+      area_0 : []
+    },
+
+    //Event의 페이즈
+    current_phase : 0,
     battle_current_text : "모의 전투 수행",
     battle_current_Choicable : [
       {
@@ -107,11 +113,22 @@ export const current_on_battle = new Vuex.Store({
     },
     // Event가 옮겨간 경우,
     setEvent (state, event_type, identify_number){
+      /*
+      Event Phase
+      ready, progress, rooting
+
+      Battle Phase
+      ready, ( strat, player, enemy, turnend ), end, rooting
+      */
       state.world_current_event_type = event_type;
       state.world_current_event_identifynum = identify_number;
     },
     movePhase (state, phase){
-      state.battle_current_phase = phase;
+      /*
+      Event Types
+      event, battle, chaser
+      */
+      state.current_phase = phase;
     },
 
 

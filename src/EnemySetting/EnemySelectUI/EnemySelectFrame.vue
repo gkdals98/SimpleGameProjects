@@ -5,8 +5,9 @@
       v-bind:key="index"
       v-bind:isChaser=false
       v-bind:enemy="enemy"
+      @enemy_specified="enemySpecified"
     />
-    <EnemyItem v-bind:isChaser=true v-bind:enemy="current_chaser"/>
+    <EnemyItem v-bind:isChaser=true v-bind:enemy="current_chaser" @enemy_specified="enemySpecified"/>
   </div>
 </template>
 
@@ -37,6 +38,15 @@ export default{
       return chaser_repository.getDataByIdentifyNumber(
         this.area.chaser);
     }
+  },
+  methods : {
+  enemySpecified : function (isChaser, identify_number){
+    if(isChaser){
+      current_on_battle.commit("setEvent", "chaser", chaser_identify_number);
+    }else{
+      current_on_battle.commit("setEvent", "battle", identify_number);
+    }
+  }
   }
 }
 </script>

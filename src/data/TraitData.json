@@ -4,31 +4,76 @@
       "identify_number" : 0,
       "trait_name" : "기지",
       "trait_description" : "힘 주사위를 1개 더 얻습니다.",
-      "trait_type" : "str"
+      "trait_type" : "str",
+
+      "time" : "event_start",
+      "value" : {
+        "effect" : "add_dice",
+        "value" : {
+          "dice_type" : "str",
+          "add_dice" : 1
+        }
+      }
     },
     {
       "identify_number" : 1,
       "trait_name" : "재치",
       "trait_description" : "순발력 주사위를 1개 더 얻습니다.",
-      "trait_type" : "dex"
+      "trait_type" : "dex",
+
+      "time" : "event_start",
+      "value" : {
+        "effect" : "add_dice",
+        "value" : {
+          "dice_type" : "dex",
+          "add_dice" : 1
+        }
+      }
     },
     {
       "identify_number" : 2,
       "trait_name" : "현명",
       "trait_description" : "지식 주사위를 1개 더 얻습니다.",
-      "trait_type" : "inteli"
+      "trait_type" : "inteli",
+
+      "time" : "event_start",
+      "value" : {
+        "effect" : "add_dice",
+        "value" : {
+          "dice_type" : "inteli",
+          "add_dice" : 1
+        }
+      }
     },
     {
       "identify_number" : 3,
       "trait_name" : "방어술",
       "trait_description" : "방어 주사위를 1개 더 얻습니다.",
-      "trait_type" : "def"
+      "trait_type" : "def",
+
+      "time" : "event_start",
+      "value" : {
+        "effect" : "add_dice",
+        "value" : {
+          "dice_type" : "def",
+          "add_dice" : 1
+        }
+      }
     },
     {
       "identify_number" : 4,
       "trait_name" : "침착함",
       "trait_description" : "혼란상태이상을 받을 시 지속시간을 1 적게 받습니다.",
-      "trait_type" : "buff"
+      "trait_type" : "buff",
+
+      "time" : "enemy_attack_end",
+      "value" : {
+        "effect" : "reduce_confusion",
+        "value" : {
+          "duration" : 0,
+          "value" : 1
+        }
+      }
     },
     {
       "identify_number" : 5,
@@ -65,6 +110,12 @@
       "trait_name" : "지혈 지식",
       "trait_description" : "탐색 이벤트에서 지식 판정을 통해 추가 붕대를 획득할 수 있습니다.",
       "trait_type" : "inteli"
+    },
+    {
+      "identify_number" : 11,
+      "trait_name" : "검은 팔??",
+      "trait_description" : "아직은 무엇인지 알 수 없습니다..",
+      "trait_type" : "penalty"
     }
   ],
 

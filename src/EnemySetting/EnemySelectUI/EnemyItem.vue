@@ -15,6 +15,15 @@
       </div>
     </div>
     <div class="enemy_skill">
+      <div class="enemy_skill_component enemy_skill_div"
+        v-for="(skill, index) in enemy.skills"
+        v-bind:key="index"
+        >
+        {{skill.skill_name}}
+      </div>
+      <div class="enemy_skill_component select_enemy_button" @click="selectEnemy">
+        Select
+      </div>
     </div>
   </div>
 </template>
@@ -41,8 +50,8 @@ export default{
     }
   },
   methods : {
-    selectArea : function () {
-      this.$emit('area_selected', this.area.identify_number);
+    selectEnemy : function () {
+      this.$emit('enemy_specified', this.isChaser, this.enemy.identify_number);
     },
 
   }
@@ -74,6 +83,8 @@ export default{
       border-color : grey;
       background-color: #5C183E;
       color: #C7BFD6;
+      display: flex;
+      align-items: center;
     }
     .enemy_stat_div{
       width: 205px;
@@ -107,6 +118,23 @@ export default{
   .enemy_skill{
     display: inline-flex;
     justify-content: space-between;
+    margin-top: 4px;
+    .enemy_skill_component{
+      width: 60px;
+      height: 60px;
+      border : 4px solid;
+      border-radius:9px;
+      border-color : grey;
+      display: flex;
+      align-items: center;
+    }
+    .enemy_skill_div{
+      background-color : #454545;
+      color : #ED6B6B;
+    }
+    .select_enemy_button{
+      background-color : #B3B3B3;
+    }
   }
 /*
 
