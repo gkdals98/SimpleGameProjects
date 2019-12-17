@@ -18,11 +18,11 @@
       "is_consumable" : true,
       "effect" : [
         {
-          "identify_number" : 0,
-          "effect_name" : "즉시 회복",
+          "effect_description" : "HP 회복",
+          "effect_name" : "HP_Change",
           "target" : "player",
           "duration" : 0,
-          "value" : [
+          "values" : [
             10
           ]
         }
@@ -39,21 +39,42 @@
       "is_consumable" : true,
       "effect" : [
         {
-          "identify_number" : 1,
-          "effect_name" : "허기 회복",
+          "effect_description" : "허기 회복",
+          "effect_name" : "Hunger_Change",
           "target" : "player",
           "duration" : 0,
-          "value" : [
+          "values" : [
             10
           ]
         },
         {
-          "identify_number" : 5,
-          "effect_name" : "스트레스 증가",
+          "effect_description" : "스트레스 증가",
+          "effect_name" : "Stress_Change",
+          "target" : "player",
+          "duration" : 0,
+          "values" : [
+            5
+          ]
+        }
+      ]
+    },
+
+
+
+    {
+      "identify_number" : 3,
+
+      "item_name" : "감",
+      "limit" : 5,
+      "is_consumable" : true,
+      "effect" : [
+        {
+          "effect_description" : "허기 회복",
+          "effect_name" : "Hunger_Change",
           "target" : "player",
           "duration" : 0,
           "value" : [
-            5
+            10
           ]
         }
       ]

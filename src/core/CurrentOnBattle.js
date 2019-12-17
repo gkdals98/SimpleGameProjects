@@ -23,22 +23,30 @@ export const current_on_battle = new Vuex.Store({
 
     //Event의 페이즈
     current_phase : 0,
-    battle_current_text : "모의 전투 수행",
-    battle_current_Choicable : [
-      {
-        text : "기습한다",
-        link : 0
-      },
-      {
-        text : "도망간다",
-        link : 1
-      }
-    ],
 
-    player_max_HP : 100,
-    player_current_HP : 100,
-    player_max_snt : 100,
-    player_current_snt : 100,
+    player : {
+      max_HP : 100,
+      current_HP : 100,
+      max_snt : 100,
+      current_snt : 100,
+      max_hunger : 100,
+      current_hunger : 100,
+
+      str : 3,
+      current_str : 3,
+
+      dex : 3,
+      current_dex : 3,
+
+      int : 3,
+      current_int : 3,
+
+      def : 3,
+      current_def : 3,
+
+      buffs : []
+    },
+
     player_current_weapon : {
       item_name : "+"
     },
@@ -48,12 +56,7 @@ export const current_on_battle = new Vuex.Store({
     player_current_backpack : {
       item_name : "+"
     },
-    player_current_str_dices : 3,
-    player_current_dex_dices : 3,
-    player_current_int_dices : 3,
-    player_current_def_dices : 3,
     player_current_traits : [],
-    player_current_buffs : [],
     player_inventory : item_repository.getDummyData(),
     player_inventory_pointer : 0,
 
@@ -152,48 +155,28 @@ export const current_on_battle = new Vuex.Store({
     /*
     주사위 설정
     */
-    strAdd ( state, backpack ) {
-      if(state.player_current_str_dices < 9){
-        state.player_current_str_dices++;
-      }
-    },
-    strMinus ( state, backpack ) {
-      if(state.player_current_str_dices > 1){
-        state.player_current_str_dices--;
-      }
-    },
-    dexAdd ( state, backpack ) {
-      if(state.player_current_dex_dices < 9){
-        state.player_current_dex_dices++;
-      }
-    },
-    dexMinus ( state, backpack ) {
-      if(state.player_current_dex_dices > 1){
-        state.player_current_dex_dices--;
-      }
-    },
-    intAdd ( state, backpack ) {
-      if(state.player_current_int_dices < 9){
-        state.player_current_int_dices++;
-      }
-    },
-    intMinus ( state, backpack ) {
-      if(state.player_current_int_dices > 1){
-        state.player_current_int_dices--;
-      }
-    },
-    defAdd ( state, backpack ) {
-      if(state.player_current_def_dices < 9){
-        state.player_current_def_dices++;
-      }
-    },
-    defMinus ( state, backpack ) {
-      if(state.player_current_def_dices > 0){
-        state.player_current_def_dices--;
+    playerStatusChange ( state, stat_chg ) {
+      var changed = state.player[stat_chg.type] + stat_chg.value
+      if (changed < 10 && changed > 0){
+        state.player[stat_chg.type] = state.player[stat_chg.type] + stat_chg.value;
+
+        var current = "current_" + stat_chg.type;
+        state.player[current] = state.player[current] + stat_chg.value;
       }
     },
 
 
+    playerCurrentStatusChange ( state, stat_chg ) {
+      var current = "current_" + stat_chg.type;
+      var changed = state.player[stat_chg.type] + stat_chg.value
+
+      if (changed < 10 && changed > 0){
+        state.player[stat_chg.type] = state.player[stat_chg.type] + stat_chg.value;
+
+        var current = "current_" + stat_chg.type;
+        state.player[current] = state.player[current] + stat_chg.value;
+      }
+    },
 
     /*
     트레잇 설정

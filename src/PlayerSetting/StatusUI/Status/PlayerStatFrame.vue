@@ -31,73 +31,31 @@ export default{
   },
   computed : {
     current_str : function () {
-      return current_on_battle.state.player_current_str_dices;
+      return current_on_battle.state.player.str;
     },
     current_dex : function () {
-      return current_on_battle.state.player_current_dex_dices;
+      return current_on_battle.state.player.dex;
     },
     current_int : function () {
-      return current_on_battle.state.player_current_int_dices;
+      return current_on_battle.state.player.int;
     },
     current_def : function () {
-      return current_on_battle.state.player_current_def_dices
-
-      f_dices;
+      return current_on_battle.state.player.def;
     }
   },
   methods : {
     add_dice : function(type){
-      if(type==="str"){
-        this.strAdd()
-      }
-      if(type==="dex"){
-        this.dexAdd()
-      }
-      if(type==="int"){
-        this.intAdd()
-      }
-      if(type==="def"){
-        this.defAdd()
-      }
+      current_on_battle.commit( "playerStatusChange", {
+        type : type,
+        value : 1
+      });
     },
     minuse_dice : function(type){
-      if(type==="str"){
-        this.strMinus()
-      }
-      if(type==="dex"){
-        this.dexMinus()
-      }
-      if(type==="int"){
-        this.intMinus()
-      }
-      if(type==="def"){
-        this.defMinus()
-      }
-    },
-    strAdd : function(){
-      current_on_battle.commit( "strAdd" );
-    },
-    strMinus : function(){
-      current_on_battle.commit( "strMinus" );
-    },
-    dexAdd : function(){
-      current_on_battle.commit( "dexAdd" );
-    },
-    dexMinus : function(){
-      current_on_battle.commit( "dexMinus" );
-    },
-    intAdd : function(){
-      current_on_battle.commit( "intAdd" );
-    },
-    intMinus : function(){
-      current_on_battle.commit( "intMinus" );
-    },
-    defAdd : function(){
-      current_on_battle.commit( "defAdd" );
-    },
-    defMinus : function(){
-      current_on_battle.commit( "defMinus" );
-    },
+      current_on_battle.commit( "playerStatusChange", {
+        type : type,
+        value : -1
+      });
+    }
   }
 }
 </script>

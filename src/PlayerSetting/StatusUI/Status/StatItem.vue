@@ -72,5 +72,6 @@ export default{
   color: #fff;
   font-size: 36px;
   margin-left: 25px;
+  width: 45px;
 }
 </style>

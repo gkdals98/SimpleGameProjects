@@ -72,13 +72,11 @@
       },
       "choice_link" : [
         {
-          "roll_phase" : {
-            "type" : "dice_roll",
-            "text" : "생각보다 타고 올라갈만한 나무다. 이 높이라면....!",
-            "need_dice" : {
-              "dice_type" : "dex",
-              "value" : "3"
-            }
+          "type" : "dice_roll",
+          "text" : "생각보다 타고 올라갈만한 나무다. 이 높이라면....!",
+          "need_dice" : {
+            "dice_type" : "dex",
+            "value" : "3"
           },
           "success" : {
             "type" : "normal",
@@ -101,7 +99,7 @@
           "text" : "식량을 얻은건 기쁘지만 아무래도 소리가 컸다. 그만 움직여야할 때다.",
           "value" : {
             "type" : "gain_item"
-            "which" : 4,
+            "which" : 3,
             "amount" : 2
           }
         },
