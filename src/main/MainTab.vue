@@ -15,21 +15,21 @@
       </label>
       <input type="radio" name="tabs" id="tab_0" v-model="tab_number" value="0"/>
       <label for="tab_0">
-        <div class="content"><BattleFrame/></div>
+        <div class="content"><PlayMainFrame/></div>
       </label>
     </div>
   </div>
 </template>
 
 <script>
-import BattleFrame from '../Battle/BattleFrame';
+import PlayMainFrame from '../Play/PlayMainFrame';
 import PlayerSettingFrame from '../PlayerSetting/PlayerSettingFrame';
 import EnemySettingFrame from '../EnemySetting/EnemySettingFrame';
 
 export default {
   name: 'MainTab',
   components: {
-    BattleFrame,
+    PlayMainFrame,
     PlayerSettingFrame,
     EnemySettingFrame
   },
