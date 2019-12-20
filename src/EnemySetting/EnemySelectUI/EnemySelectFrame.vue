@@ -2,9 +2,9 @@
   <div id="enemy_select_frame">
     <EnemyItem
       v-for="(enemy, index) in enemy_list"
-      v-bind:key="index"
-      v-bind:isChaser=false
-      v-bind:enemy="enemy"
+      :key="index"
+      :isChaser=false
+      :enemy="enemy"
       @enemy_specified="enemySpecified"
     />
     <EnemyItem v-bind:isChaser=true v-bind:enemy="current_chaser" @enemy_specified="enemySpecified"/>

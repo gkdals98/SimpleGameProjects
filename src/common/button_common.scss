@@ -1,0 +1,12 @@
+.setting_all_button{
+  position: absolute;
+  width: 165px;
+  height: 90px;
+  border : 4px solid #000000;
+  border-radius:9px;
+  font-weight:bolder;
+  font-size: 20px;
+  &:hover{
+    border : 4px solid #b3b3cc;
+  }
+}
