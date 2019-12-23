@@ -12,14 +12,14 @@
       v-bind:buttonVisible=true
       @trait_selected="dispose_trait"
     />
-    <div id="add_trait" @click="open_traitlist">
+    <div id="add_trait" class="text_center_button" @click="open_traitlist">
       +
     </div>
   </div>
 </template>
 
 <script>
-import TraitItem from '../../../common/component/TraitItem';
+import TraitItem from '../TraitItem';
 import TraitModal from './TraitModal';
 import { current_on_battle } from "../../../core/CurrentOnBattle.js";
 export default{
@@ -53,6 +53,7 @@ export default{
 </script>
 
 <style scoped lang="scss">
+@import "../../button_common.scss";
 #trait_frame{
   position: absolute;
   width: 310px;
@@ -68,19 +69,16 @@ export default{
   flex-wrap: wrap;
   overflow: auto;
   #add_trait{
-    border : 4px solid;
-    border-radius:9px;
+    border : 3px solid;
+    border-radius:4px;
     width: 25px;
     height: 25px;
     margin-left: 5px;
     margin-top: 3px;
-    padding: 1px;
     color : white;
     border-color : grey;
     background : red;
 
-    display: flex;
-    align-items: center;
     cursor: pointer;
   }
 }

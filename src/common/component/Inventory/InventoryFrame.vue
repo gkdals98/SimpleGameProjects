@@ -22,7 +22,7 @@
 
 <script>
 import ItemModal from "./ItemModal";
-import ItemObject from "../../../common/component/ItemObject";
+import ItemObject from "../ItemObject";
 import { current_on_battle } from "../../../core/CurrentOnBattle.js";
 export default{
   name : 'InventoryFrame',
@@ -67,17 +67,10 @@ export default{
 <style scoped lang="scss">
 #inventory_frame{
   position: absolute;
-  width: 310px;
-  height: 180px;
-  margin-left: 5px;
-  margin-top: 205px;
   background : #1a000d;
-  border : 4px solid #000000;
-  border-radius:9px;
 
   align-content: flex-start;
   display: flex;
   flex-wrap: wrap;
-  overflow: auto;
 }
 </style>

@@ -29,8 +29,8 @@
       </PlayerStatusCanvas>
     </div>
     <div id="icons_frame">
-      <div id="inventory_button">인벤토리</div>
-      <div id="traits_button">Trait</div>
+      <div id="inventory_button" class="text_center_button" :onclick="show_inventory">인벤토리</div>
+      <div id="traits_button" class="text_center_button">Trait</div>
     </div>
   </div>
 </template>
@@ -65,13 +65,16 @@ export default{
       return current_on_battle.state.player.current_hunger;
     }
   },
-
-  // Randomly selects a value to randomly increment or decrement every 16 ms.
-  // Not really important, just demonstrates that reactivity still works.
+  methods : {
+    show_inventory : function() {
+      
+    }
+  }
 }
 </script>
 
 <style scoped lang="scss">
+@import "../../common/button_common.scss";
 #status_main_frame{
   position: absolute;
   width: 330px;
@@ -100,11 +103,7 @@ export default{
       background : #AD7013;
       border-radius:4px;
       border : 4px solid #9E9E9E;
-      display: flex;
-      align-items: center;
-      font-weight:bolder;
       font-size: 20px;
-      justify-content: center;
     }
     #traits_button {
       width : 90px;
@@ -113,11 +112,7 @@ export default{
       margin-top: 5px;
       border-radius:4px;
       border : 4px solid #9E9E9E;
-      display: flex;
-      align-items: center;
-      font-weight:bolder;
       font-size: 20px;
-      justify-content: center;
     }
   }
 }

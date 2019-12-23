@@ -15,13 +15,13 @@
       </div>
     </div>
     <div class="enemy_skill">
-      <div class="enemy_skill_component enemy_skill_div"
+      <div class="enemy_skill_component enemy_skill_div text_center_button"
         v-for="(skill, index) in enemy.skills"
         v-bind:key="index"
         >
         {{skill.skill_name}}
       </div>
-      <div class="enemy_skill_component select_enemy_button" @click="selectEnemy">
+      <div class="enemy_skill_component select_enemy_button text_center_button" @click="selectEnemy">
         Select
       </div>
     </div>
@@ -58,6 +58,7 @@ export default{
 }
 </script>
 <style scoped lang="scss">
+@import "../../common/button_common.scss";
 .enemy_item{
   width: 295px;
   height: 150px;
@@ -125,8 +126,6 @@ export default{
       border : 4px solid;
       border-radius:9px;
       border-color : grey;
-      display: flex;
-      align-items: center;
     }
     .enemy_skill_div{
       background-color : #454545;

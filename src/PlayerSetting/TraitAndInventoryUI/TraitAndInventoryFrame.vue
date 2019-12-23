@@ -1,13 +1,15 @@
 <template>
   <div id="trait_and_inventory_main_frame">
     <TraitFrame/>
-    <InventoryFrame/>
+    <div id="frame_item">
+      <InventoryFrame/>
+    </div>
   </div>
 </template>
 
 <script>
-import TraitFrame from './Trait/TraitFrame';
-import InventoryFrame from './Inventory/InventoryFrame';
+import TraitFrame from '../../common/component/Trait/TraitFrame';
+import InventoryFrame from '../../common/component/Inventory/InventoryFrame';
 export default{
   name : 'TraitAndInventoryFrame',
   components : {
@@ -27,5 +29,16 @@ export default{
   background : #5F856F;
   border : 4px solid #000000;
   border-radius:9px;
+  #frame_item{
+    border : 4px solid #000000;
+    border-radius:9px;
+    position: absolute;
+    width: 310px;
+    height: 180px;
+    margin-left: 5px;
+    margin-top: 205px;
+    overflow: auto;
+
+  }
 }
 </style>

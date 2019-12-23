@@ -12,7 +12,7 @@
       </div>
     </div>
 
-    <div class="item-empty" v-show="is_empty" @click="show_modal">
+    <div class="item-empty text_center_button" v-show="is_empty" @click="show_modal">
       +
     </div>
   </div>
@@ -53,6 +53,7 @@ export default{
 }
 </script>
 <style scoped lang="scss">
+@import "../button_common.scss";
 .item_object{
   width: 55px;
   height: 55px;
