@@ -21,3 +21,16 @@
     background-color: #5F856F;
   }
 }
+
+.modal-header{
+  text-align: right;
+
+  .btn-close {
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #4AAE9B;
+    background: transparent;
+  }
+}

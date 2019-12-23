@@ -1,5 +1,10 @@
 <template>
   <div id="status_main_frame">
+    <InventoryModal
+      v-show="isInventoryVisible"
+      v-bind:visible="isInventoryVisible"
+      @close="closeModal"
+    />
     <div id="status_frame">
       <PlayerStatusCanvas style="width: 100%; height: 130px;">
         <PlayerStatusBar
@@ -29,8 +34,8 @@
       </PlayerStatusCanvas>
     </div>
     <div id="icons_frame">
-      <div id="inventory_button" class="text_center_button" :onclick="show_inventory">인벤토리</div>
-      <div id="traits_button" class="text_center_button">Trait</div>
+      <div class="text_center_button user_button" @click="show_inventory">가방</div>
+      <div id="traits_button" class="text_center_button user_button">Trait</div>
     </div>
   </div>
 </template>
@@ -39,15 +44,19 @@
 import { current_on_battle } from "../../core/CurrentOnBattle.js";
 import PlayerStatusCanvas from "./PlayerStatusCanvas";
 import PlayerStatusBar from "./PlayerStatusBar";
+import InventoryModal from "./InventoryModal";
+
 export default{
   name : 'StatusMainFrame',
 
   components: {
     PlayerStatusCanvas,
-    PlayerStatusBar
+    PlayerStatusBar,
+    InventoryModal
   },
   data : function () {
     return {
+      isInventoryVisible : false,
       hp_color : "#C71E3D",
       snt_color : "#BFB64B",
       hunger_color : "#3D735A"
@@ -67,7 +76,11 @@ export default{
   },
   methods : {
     show_inventory : function() {
-      
+      console.log("haha");
+      this.isInventoryVisible = true;
+    },
+    closeModal : function(){
+      this.isInventoryVisible = false;
     }
   }
 }
@@ -97,19 +110,14 @@ export default{
     height: 130px;
     margin-left: 5px;
     margin-top: 5px;
-    #inventory_button {
-      width : 90px;
-      height: 55px;
-      background : #AD7013;
-      border-radius:4px;
-      border : 4px solid #9E9E9E;
-      font-size: 20px;
-    }
+
     #traits_button {
+      margin-top: 5px;
+    }
+    .user_button {
       width : 90px;
       height: 55px;
       background : #AD7013;
-      margin-top: 5px;
       border-radius:4px;
       border : 4px solid #9E9E9E;
       font-size: 20px;
